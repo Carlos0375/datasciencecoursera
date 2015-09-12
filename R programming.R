@@ -59,7 +59,7 @@ f_vector_two <- function(n,m){
   return(list(v1=vector01,v2=vector02))
 } 
 
-f_vector_two(10,3.75)
+f_vector_two(50,3.75)
 
 # create a data.frame out of two vectors
 
