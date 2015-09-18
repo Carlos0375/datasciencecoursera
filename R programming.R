@@ -156,3 +156,40 @@ f_df_preset <- function(n,m){
 }
 
 f_df_preset(5,2)
+
+################ The Matrix #################
+
+matrix01 <- matrix()
+
+c1 <- c(1:10)
+
+matrix01 <- matrix(c1, byrow=FALSE)
+
+c2 <- c(11:20)
+
+matrix01 <- cbind(matrix01, matrix(c2, byrow=FALSE))
+
+# Create a function that creates x times random normal distributed values of the amount y and saves them in a data.frame
+# I set the mean to 175 and the sd to 5 in the function
+f_normal <- function(x,y){
+  data <- matrix(ncol=x,nrow=y)
+  for (i in 1:x){
+    data[,i] <- rnorm(y,175,5)
+  }
+  data <- as.data.frame(data)
+  return(data)
+}
+f_normal(5,10)
+
+# The same function with freedom to also define mean and sd
+
+f_normal <- function(iterations,amount,mean,sd){
+  data <- matrix(ncol=iterations,nrow=amount)
+  for (i in 1:iterations){
+    data[,i] <- rnorm(amount,mean,sd)
+  }
+  data <- as.data.frame(data)
+  return(data)
+}
+f_normal(5,10,175,5)
+
