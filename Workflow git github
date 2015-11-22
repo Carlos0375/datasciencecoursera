@@ -1,0 +1,11 @@
+## Terminal
+Navigate to local folder
+
+
+
+
+git add <filename.R>
+
+git commit -m <commit text>
+
+git push -f <repo name> <branch name>
